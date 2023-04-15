@@ -1,4 +1,5 @@
-package Lessons; /**
+package Lessons;
+/**
  * коменты многострочные
  * <p>
  * привет,епти
