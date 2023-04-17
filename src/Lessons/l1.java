@@ -90,6 +90,11 @@ public class l1 {
         System.out.printf("%d + %d = %d \n", a1, b1, c1);
         System.out.println(res);
         sayHi();
+//      построение строки, встроенная фишечка
+        StringBuilder sb = new StringBuilder();
+        for (int i1 = 0; i1 < 1_000_000; i1++) {
+            sb.append("+");
+        }
     }
 
     static void sayHi() {
@@ -110,3 +115,39 @@ public class l1 {
     }
 }
 //форматирование кода Ctrl+Alt+L
+/**
+ * StringBuilder sb = new StringBuilder();
+ * for (int i1 = 0; i1 < 1_000_000; i1++) {
+ * sb.append("+");
+ * Функционал стринг-билдера.
+ * ! В java строка не является по умолчанию массивом символов, нужно
+ * преобразовывать.
+ * Если компануем, обираем материал - стринг-билдер
+ * Если разбираем готовые - строки
+ * concat(): объединение строк
+ * valueOf(): преобразует Object в строковое представление (завязан на toString())
+ * join(): объединяет набор строк в одну с учетом разделителя
+ * charAt(): получение символа по индексу
+ * indexOf(): первый индекс вхождения подстроки
+ * lastIndexOf(): последний индекс вхождения подстроки
+ * startsWith()/endsWith(): определяет, начинается/заканчивается ли строка с подстроки
+ * replace(): замена одной подстроки на другую
+ * trim(): удаляет начальные и конечные пробелы
+ * substring(): возвращает подстроку, см.аргументы
+ * toLowerCase()/toUpperCase(): возвращает новую строку в нижнем/верхнем регистре
+ * сompareTo(): сравнивает две строки
+ * equals(): сравнивает строки с учетом регистра
+ * equalsIgnoreCase(): сравнивает строки без учета регистра
+ * regionMatches(): сравнивает подстроки в строках
+ * <p>
+ * File - тип данных
+ * import java.io.File;
+ * File f1 = new File("file.txt"); - относительный путь
+ * File f2 = new File("/Users/sk/vscode/java_projects/file.txt") - абсолютный.
+ * String pathProject = System.getProperty("user.dir");
+ * String pathFile = pathProject.concat("/file.txt");
+ * File f3 = new File(pathFile);
+ * System.out.println(f3.getAbsolutePath ());
+ * // /Users/sk/vscode/java_projects/file.txt
+ * // C:/Users/Sk/Documents/xxx/brainexplosion/java/file.txt
+ */
