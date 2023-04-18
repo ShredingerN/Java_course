@@ -6,6 +6,7 @@ package Lessons;
  */
 
 import java.util.Scanner;
+import java.util.logging.FileHandler;
 
 public class l1 {
     public static void main(String[] args) {
@@ -120,6 +121,7 @@ public class l1 {
  * for (int i1 = 0; i1 < 1_000_000; i1++) {
  * sb.append("+");
  * Функционал стринг-билдера.
+ * -------------------------
  * ! В java строка не является по умолчанию массивом символов, нужно
  * преобразовывать.
  * Если компануем, обираем материал - стринг-билдер
@@ -141,6 +143,7 @@ public class l1 {
  * regionMatches(): сравнивает подстроки в строках
  * <p>
  * File - тип данных
+ * ----------------------
  * import java.io.File;
  * File f1 = new File("file.txt"); - относительный путь
  * File f2 = new File("/Users/sk/vscode/java_projects/file.txt") - абсолютный.
@@ -150,4 +153,45 @@ public class l1 {
  * System.out.println(f3.getAbsolutePath ());
  * // /Users/sk/vscode/java_projects/file.txt
  * // C:/Users/Sk/Documents/xxx/brainexplosion/java/file.txt
+ * try-catch-finally - лучше не использовать
+ * <p>
+ * Работа с файловой системой
+ * ---------------------------
+ * isHidden(): возвращает истину, если каталог или файл является скрытым
+ * length(): возвращает размер файла в байтах
+ * lastModified(): возвращает время последнего изменения файла или каталога
+ * list(): возвращает массив файлов и подкаталогов, которые находятся в каталоге
+ * listFiles(): возвращает массив файлов и подкаталогов, которые находятся
+ * в определенном каталоге
+ * mkdir(): создает новый каталог
+ * renameTo(File dest): переименовывает файл или каталог
+ * length(): возвращает размер файла в байтах
+ * lastModified(): возвращает время последнего изменения
+ * файла или каталога
+ * list(): возвращает массив файлов и подкаталогов, которые находятся в каталоге
+ * listFiles(): возвращает массив файлов и подкаталогов, которые
+ * находятся в определенном каталоге
+ * mkdir(): создает новый каталог
+ * renameTo(File dest): переименовывает файл или каталог
+ * <p>
+ * Бинарные файлы (16-ная система) - гугля)
+ * ----------------------
+ * Логирование
+ * -----------------------
+ * import java.util.logging.
+ * Использование
+ * Logger logger = Logger.getLogger()
+ * Уровни важности
+ * INFO, DEBUG, ERROR, WARNING и др.
+ * Вывод
+ * ConsoleHandler info = new ConsoleHandler();
+ * log.addHandler(info);
+ * Формат вывода:
+ * структурированный, абы как*
+ * XMLFormatter, SimpleFormatter
+ * Логирование в файл
+ * -----------------
+ * FileHandler x = new FileHandler("log.xml")
+ * logger.addHandler(x)
  */
+
