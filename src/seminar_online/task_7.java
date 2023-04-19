@@ -22,7 +22,8 @@ public class task_7 {
     }
 
     private static void testToFile(String str) {
-        File testFile = new File("C:\\Users\\jo467\\Downloads\\Тестировщик\\GR3483\\Java_course\\src\\seminar_online\\testFile.txt");
+        File testFile = new File("C:\\Users\\jo467\\Downloads\\Тестировщик\\GR3483\\Java_course\\" +
+                "src\\seminar_online\\testFile.txt");
         try {
             FileWriter fw = new FileWriter(testFile);
             fw.append(str);
