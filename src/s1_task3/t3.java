@@ -1,16 +1,20 @@
 package s1_task3;
 
+import java.io.IOException;
+import java.util.InputMismatchException;
 import java.util.Scanner;
+import java.util.logging.*;
+
 
 //1. В данном варианте применила рекурсию, калькулятор работает, пока пользователь сам не остановит программу вводом 0.
 //   Не уверена в корректности созданного метода =), но это был самый простой способ с реализацией рекурсии - запихать
 //   все переменные внутрь метода, проверку деления на 0 и обработку исключения.
 public class t3 {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         Calculator();
     }
 
-    public static void Calculator() {
+    public static void Calculator() throws IOException {
         Scanner Scanner = new Scanner(System.in);
         System.out.print("PLease enter operation(enter 0 for close program): \n+\n-\n/\n*\n^\nYour chose: ");
         char op = Scanner.next().charAt(0);
@@ -49,14 +53,23 @@ public class t3 {
                         System.out.println("Wrong operator! Try again");
                         Calculator();
                 }
-            } catch (java.util.InputMismatchException e) {
+            } catch (InputMismatchException e) {
                 System.out.println("Error! it's not a number. Try again");
                 Calculator();
             }
         }
+        logg();
+    }
+
+    public static void logg() throws IOException {
+        Logger log = Logger.getLogger(String.valueOf(t3.class));
+        FileHandler fh = new FileHandler(".\\src\\s1_task3\\calc.log");
+        log.addHandler(fh);
+        SimpleFormatter form = new SimpleFormatter();
+        fh.setFormatter(form);
+        log.log(Level.INFO, "Рассчет завершен");
     }
 }
-
 //    // 2. Простой вариант калькулятора
 //    public static void main(String[] args) {
 //        Scanner Scanner = new Scanner(System.in);
