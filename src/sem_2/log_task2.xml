@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2023-04-20T21:05:24.015958600Z</date>
+  <millis>1682024724015</millis>
+  <nanos>958600</nanos>
+  <sequence>0</sequence>
+  <logger>class java.lang.Class</logger>
+  <level>INFO</level>
+  <class>sem_2.task_2</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Итерация</message>
+</record>
+<record>
+  <date>2023-04-20T21:05:24.109228600Z</date>
+  <millis>1682024724109</millis>
+  <nanos>228600</nanos>
+  <sequence>1</sequence>
+  <logger>class java.lang.Class</logger>
+  <level>INFO</level>
+  <class>sem_2.task_2</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Итерация</message>
+</record>
+<record>
+  <date>2023-04-20T21:05:24.111227700Z</date>
+  <millis>1682024724111</millis>
+  <nanos>227700</nanos>
+  <sequence>2</sequence>
+  <logger>class java.lang.Class</logger>
+  <level>INFO</level>
+  <class>sem_2.task_2</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Итерация</message>
+</record>
+<record>
+  <date>2023-04-20T21:05:24.111227700Z</date>
+  <millis>1682024724111</millis>
+  <nanos>227700</nanos>
+  <sequence>3</sequence>
+  <logger>class java.lang.Class</logger>
+  <level>INFO</level>
+  <class>sem_2.task_2</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Итерация</message>
+</record>
+<record>
+  <date>2023-04-20T21:05:24.112229600Z</date>
+  <millis>1682024724112</millis>
+  <nanos>229600</nanos>
+  <sequence>4</sequence>
+  <logger>class java.lang.Class</logger>
+  <level>INFO</level>
+  <class>sem_2.task_2</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Итерация</message>
+</record>
+<record>
+  <date>2023-04-20T21:05:24.113228400Z</date>
+  <millis>1682024724113</millis>
+  <nanos>228400</nanos>
+  <sequence>5</sequence>
+  <logger>class java.lang.Class</logger>
+  <level>INFO</level>
+  <class>sem_2.task_2</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Итерация</message>
+</record>
+<record>
+  <date>2023-04-20T21:05:24.114228700Z</date>
+  <millis>1682024724114</millis>
+  <nanos>228700</nanos>
+  <sequence>6</sequence>
+  <logger>class java.lang.Class</logger>
+  <level>INFO</level>
+  <class>sem_2.task_2</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Итерация</message>
+</record>
+<record>
+  <date>2023-04-20T21:05:24.116234200Z</date>
+  <millis>1682024724116</millis>
+  <nanos>234200</nanos>
+  <sequence>7</sequence>
+  <logger>class java.lang.Class</logger>
+  <level>INFO</level>
+  <class>sem_2.task_2</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Итерация</message>
+</record>
+<record>
+  <date>2023-04-20T21:05:24.117228300Z</date>
+  <millis>1682024724117</millis>
+  <nanos>228300</nanos>
+  <sequence>8</sequence>
+  <logger>class java.lang.Class</logger>
+  <level>INFO</level>
+  <class>sem_2.task_2</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Массив отсортирован: [4, 5, 7, 8, 12, 33, 45, 55]</message>
+</record>
+</log>
