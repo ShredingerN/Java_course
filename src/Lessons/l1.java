@@ -193,5 +193,133 @@ public class l1 {
  * -----------------
  * FileHandler x = new FileHandler("log.xml")
  * logger.addHandler(x)
+ * <p>
+ * Object
+ * ----------------------------------------
+ * Тип данных Object – «всему голова»
+ * Упаковка – любой тип можно положить в переменную типа Object
+ * Распаковка – преобразование Object-переменной в нужный тип
+ * Иерархия типов – любой тип «ниже» Object’а
+ * <p>
+ * public class Ex01_object {
+ * public static void main(String[] args) {
+ * Object o = 1; GetType(o); // java.lang.Integer
+ * o = 1.2; GetType(o); // java.lang.Double
+ * }
+ * static void GetType(Object obj) {
+ * System.out.println(obj.getClass().getName());
+ * }
+ * }
+ * <p>
+ * Коварный тип, надо быть с обджектом аккуратным.
+ * public class Ex01_object {
+ * public static void main(String[] args) {
+ * System.out.println(Sum(1, 2));
+ * System.out.println(Sum(1.0, 2));
+ * System.out.println(Sum(1, 2.0));
+ * System.out.println(Sum(1.2, 2.1));
+ * }
+ * static Object Sum(Object a, Object b) {
+ * // * проверка на тип данных
+ * if (a instanceof Double && b instanceof Double) {
+ * return (Object)((Double) a + (Double) b);
+ * } else if(a instanceof Integer && b instanceof Integer) {
+ * return (Object)((Integer) a + (Integer) b);
+ * } else return 0;
+ * }
+ * }
+ * <p>
+ * public class Ex01_object {
+ * static int[] AddItem(int[] array, int item) {
+ * int length = array.length;
+ * int[] temp = new int[length + 1];
+ * System.arraycopy(array, 0, temp, 0, length);
+ * temp[length] = item;
+ * return temp;
+ * }
+ * public static void main(String[] args) {
+ * int[] a = new int[] { 0, 9 };
+ * for (int i : a) { System.out.printf("%d ", i); }
+ * a = AddItem(a, 2);
+ * a = AddItem(a, 3);
+ * for (int j : a) { System.out.printf("%d ", j); }
+ * }
+ * }
+ * <p>
+ * collection не тоже самое collections!!!
+ * Сырые типы - без указания обобщения.
+ * SAve типы - см. ниже
+ * <p>
+ * import java.util.ArrayList;
+ * import java.util.List;
+ * <p>
+ * ArrayList<Integer> list1 = new ArrayList<Integer>();
+ * ArrayList<Integer> list2 = new ArrayList<>();
+ * ArrayList<Integer> list3 = new ArrayList<>(10); - 10 элементов массива
+ * ArrayList<Integer> list4 = new ArrayList<>(list3);
+ * list.add(1025);
+ * Коллекции. Функционал
+ * -------------------------------------------------------------
+ * add(args) – добавляет элемент в список ( в т.ч. на нужную позицию)
+ * get(pos) – возвращает элемент из списка по указанной позиции
+ * indexOf(item) – первое вхождение или -1
+ * lastIndexOf(item) – последнее вхождение или -1
+ * remove(pos) – удаление элемента на указанной позиции и его возвращение
+ * set(int pos, T item) – gjvtoftn значение item элементу, который находится
+ * на позиции pos
+ * void sort(Comparator) – сортирует набор данных по правилу
+ * subList(int start, int end) – получение набора данных от позиции start до end
+ * clear() – очистка списка
+ * toString() – «конвертация» списка в строку
+ * Arrays.asList – преобразует массив в список
+ * containsAll(col) – проверяет включение всех элементов из col
+ * removeAll(col) – удаляет элементы, имеющиеся в col
+ * retainAll(col) – оставляет элементы, имеющиеся в col
+ * toArray() – конвертация списка в массив Object’ов
+ * toArray(type array) – конвертация списка в массив type
+ * List.copyOf(col) – возвращает копию списка на основе имеющегося
+ * List.of(item1, item2,...) – возвращает неизменяемый список
+ * <p>
+ * Итератор
+ * -------------------------------------------------------------
+ * <p>
+ * Получение итератора с целью более гибкой работы с данными URL
+ * Интерфейс Iterator<E>. Итератор коллекцией. Iterator занимает место
+ * Enumeration в Java Collections Framework. Итераторы отличаются от
+ * перечислений двумя способами:
+ * Итераторы позволяют вызывающей стороне удалять элементы из
+ * базовой коллекции во время итерации с четко определенной
+ * семантикой.
+ * hasNext(), next(), remove()
+ * ListIterator<E> URL
+ * hasPrevious(), E previous(), nextIndex(), previousIndex(), set(E e), add(E e)
+ * import java.util.*;
+ * public class Ex007_Iterator {
+ * public static void main(String[] args) {
+ * List<Integer> list = List.of(1, 12, 123, 1234, 12345);
+ * for (int item : list) { System.out.println(item); }
+ * Iterator<Integer> col = list.iterator();
+ * while (col.hasNext()) {
+ * //System.out.println(col.next());
+ * col.next();
+ * col.remove();
+ * }
+ * }
+ * }
+ * двусвязанные списки и односвязанные:
+ * 1. текущий элемент знает преидущий и следубщий
+ * 2. знает тольео последующий
+ * Список - не массив! разнвет типы данных
+ * LinkedList<Integer> l = new LinkedList<Integer>();
+ * l.add(1)
+ * Queue (по принципу Fifo)
+ * Queue<Integer> queue = new LinkedList<Integer>();
+ * queue.add(1)
+ * PriorityQueue Наивысший приоритет имеет «наименьший» элемент.
+ * PriorityQueue<Integer> queue = new PriorityQueue<Integer>();
+ * Deque
+ * Линейная коллекция, которая поддерживает вставку и удаление
+ * элементов на обоих концах
+ * stack vector - устаревшие
  */
 
