@@ -1,8 +1,7 @@
-package seminar_online;
+package seminars_online;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Map;
 import java.util.Random;
 
 

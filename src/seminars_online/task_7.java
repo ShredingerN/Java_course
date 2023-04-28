@@ -1,4 +1,4 @@
-package seminar_online;
+package seminars_online;
 
 import java.io.File;
 import java.io.FileWriter;

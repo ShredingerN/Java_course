@@ -1,4 +1,4 @@
-package seminar_online;
+package seminars_online;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -21,7 +21,7 @@ public class task_8 {
         Collections.sort(newarr);
         System.out.println("New array:");
         System.out.println(newarr);
-        
+
 //        ArrayList<Integer> array = new ArrayList<>(size);
 //        Random rnd = new Random();
 //        // double a = Math.random();

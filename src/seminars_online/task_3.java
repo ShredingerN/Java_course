@@ -1,4 +1,4 @@
-package seminar_online;
+package seminars_online;
 
 /**
  * Дан массив nums = [3,2,2,3] и число val = 3.

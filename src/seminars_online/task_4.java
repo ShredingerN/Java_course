@@ -1,4 +1,4 @@
-package seminar_online;
+package seminars_online;
 
 /**
  * Дано четное число N (>0) и символы c1 и c2.
