@@ -2,24 +2,6 @@ package sem_3_HW;
 
 /**
  * Реализовать алгоритм сортировки слиянием
- * <p>
- * System.arrayCopy(from, fromIndex, to, toIndex, count);
- * from - массив, который копируем
- * to - массив в которой копируем
- * fromIndex - индекс в массиве from начиная с которого берем элементы для копирования
- * toIndex - индекс в массиве to начиная с которого вставляем элементы
- * count - количество элементов которые берем из массива from и вставляем в массив to
- * Массив to должен иметь достаточный размер, чтобы в нем уместились все копируемые элементы.
- */
-
-/**
- * System.arrayCopy(from, fromIndex, to, toIndex, count);
- * from - массив, который копируем
- * to - массив в которой копируем
- * fromIndex - индекс в массиве from начиная с которого берем элементы для копирования
- * toIndex - индекс в массиве to начиная с которого вставляем элементы
- * count - количество элементов которые берем из массива from и вставляем в массив to
- * Массив to должен иметь достаточный размер, чтобы в нем уместились все копируемые элементы.
  */
 
 import java.util.Arrays;
@@ -51,8 +33,7 @@ public class task_1 {
         int destIndex = startIndex;
         int[] result = sorted1 == buffer1 ? buffer2 : buffer1;
         while (index1 < middle && index2 < endIndex) {
-            result[destIndex++] = sorted1[index1] < sorted2[index2]
-                    ? sorted1[index1++] : sorted2[index2++];
+            result[destIndex++] = sorted1[index1] < sorted2[index2] ? sorted1[index1++] : sorted2[index2++];
         }
         while (index1 < middle) {
             result[destIndex++] = sorted1[index1++];
