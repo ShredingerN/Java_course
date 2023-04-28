@@ -1,4 +1,4 @@
-package sem_2;
+package sem_2_HW;
 
 import java.io.IOException;
 import java.util.Arrays;
