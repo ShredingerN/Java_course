@@ -15,7 +15,6 @@ public class t3 {
         System.out.print("PLease enter operation(enter 0 for close program): \n+\n-\n/\n*\n^\nYour chose: ");
         char op = Scanner.next().charAt(0);
         if (op == '0') {
-            Scanner.close();
             System.out.print("Bye bye!");
         } else {
             try {
