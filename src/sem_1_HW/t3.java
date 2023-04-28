@@ -1,4 +1,4 @@
-package s1_task3;
+package sem_1_HW;
 
 import java.io.IOException;
 import java.util.InputMismatchException;
@@ -67,6 +67,22 @@ public class t3 {
         SimpleFormatter form = new SimpleFormatter();
         fh.setFormatter(form);
         log.log(Level.INFO, "Рассчет завершен");
+    }
+
+    /**
+     * Вывести все простые числа от 1 до 1000
+     */
+    public static class t2 {
+        public static void main(String[] args) {
+            System.out.println("Простые числа в диапазоне от 0 до 1000: ");
+            for (int i = 2; i < 1000; i++) {
+                int count = 0;
+                for (int j = 2; j <= i; j++) {
+                    if ((i % j) == 0) count++;
+                }
+                if (count < 2) System.out.println(i);
+            }
+        }
     }
 }
 //    // 2. Простой вариант калькулятора
