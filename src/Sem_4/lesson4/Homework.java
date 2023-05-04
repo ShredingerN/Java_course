@@ -1,9 +1,6 @@
 package Sem_4.lesson4;
 
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 
 public class Homework {
 
@@ -34,6 +31,31 @@ public class Homework {
 
     public static void main(String[] args) {
 
-
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Введите строку(print - печать; revert - удаление предыдущей строки; exit - выход)");
+        LinkedList<String> list = new LinkedList<>();
+        label:
+        while (true) {
+            String inputSt = sc.nextLine();
+            switch (inputSt) {
+                case "exit":
+                    break label;
+                case "print":
+                    System.out.println("Печать строк в обратном порядке\n" + list);
+                    break;
+                case "revert":
+                    if (!list.isEmpty()) {
+                        list.removeFirst();
+                        System.out.println("Удаление последней введеной строки из памяти:\n" + list);
+                    } else {
+                        System.out.println("Нет сохраненных строк");
+                    }
+                    break;
+                default:
+//                  по умалчанию задаем вставку каждого нового введенного пользователем элемента в начало списка
+                    list.addFirst(inputSt);
+                    break;
+            }
+        }
     }
 }
